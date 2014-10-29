@@ -1,0 +1,51 @@
+/* CSS declarations go here */
+body {
+	margin: 0;
+}
+
+.nav {
+	position: absolute;
+	top: 0.5rem;
+	right: 0;
+	bottom: auto;
+	left: 0;
+	width: auto;
+	height: auto;
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	text-align: center;
+	z-index: 1;
+}
+.nav.white {
+	color: #ffffff;
+}
+.nav .logo {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 1.125em;
+	letter-spacing: 0.3em;
+	line-height: 3rem;
+	text-transform: uppercase;
+}
+
+section {
+  width: 100%;
+  padding: 0 7%;
+  display: table;
+  margin: 0;
+  max-width: none;
+  background-color: #373B44;
+  height: 100vh;
+}
+
+.content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.splash {
+	background-color: #417dc1;
+	background-image: url('/diagmonds.png');
+}
