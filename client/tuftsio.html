@@ -4,6 +4,12 @@
 </head>
 
 <body>
+	{{> navbar}}
+	{{> home}}
+</body>
+
+<!-- Navbar -->
+<template name="navbar">
 	<nav class="nav white">
  		<ul class="nav-group">
 	 		<li><a href='#'>ABOUT</a></li>
@@ -13,18 +19,17 @@
 	 		<li><a href='#'>SIGN IN</a></li>
 	 	</ul>
  	</nav>
-	<div class="wrap">
-	 	<section class="splash">
-	 		<div class="content">
-	  			<h1>Welcome to Tufts.io</h1>
-	  			<h3>Let's build something awesome.</h3>
-	  			<a id="learn-more" href="#">Learn More <i class="fa fa-angle-double-right"></i></a>
-	  		</div>
-	 	</section>
-	</div>
-</body>
+</template>
 
+
+<!-- PAGE TEMPLATES -->
 <template name="home">
-	<button>Click Me</button>
-	<p>You've pressed the button {{counter}} times.</p>
+	<section class="splash">
+	 	<div class="content">
+	  		<h1>Welcome to Tufts.io</h1>
+	  		<br><br>
+	  		<!-- <h3>Let's build something awesome.</h3> -->
+	  		<a id="learn-more" href="#">Learn More <i class="fa fa-angle-double-right"></i></a>
+		</div>
+	</section>
 </template>

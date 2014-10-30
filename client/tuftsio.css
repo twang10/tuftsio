@@ -91,7 +91,7 @@ section.splash h1 {
 	font-size: 5em;
 	color: white;
 	text-shadow: 0px 0px 10px rgba(0,0,0,0.50);
-	margin-bottom: 10px;
+	margin-bottom: 0px;
 }
 
 section.splash h3 {
