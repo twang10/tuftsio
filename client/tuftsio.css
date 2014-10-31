@@ -67,7 +67,6 @@ section {
   display: table;
   margin: 0;
   max-width: none;
-  background-color: rgba(0, 0, 0, 0.50);
   height: 100vh;
 
 }
@@ -77,11 +76,7 @@ section {
   text-align: center;
 }
 
-section.splash {
-	background: -webkit-linear-gradient(45deg, rgba(137, 143, 255, 0.05) 0%,rgba(5, 171, 224, 0.25) 100%), url('/splash.jpeg') no-repeat;
-	background: linear-gradient(45deg, rgba(137, 143, 255, 0.05) 0%,rgba(5, 171, 224, 0.25) 100%), url('/splash.jpeg') no-repeat;
-	background-size: 120%;
-}
+
 
 section.splash .content {
 	vertical-align: middle;
@@ -111,4 +106,26 @@ section.splash h3 {
 #learn-more:hover {
 	color: grey;
 	background-color: white;
+}
+
+
+@media only screen and (min-width: 915px) {
+section {
+	background-color: rgba(0, 0, 0, 0.50);
+}
+
+section.splash {
+	background: -webkit-linear-gradient(45deg, rgba(137, 143, 255, 0.05) 0%,rgba(5, 171, 224, 0.25) 100%), url('/splash.jpeg') no-repeat;
+	background: linear-gradient(45deg, rgba(137, 143, 255, 0.05) 0%,rgba(5, 171, 224, 0.25) 100%), url('/splash.jpeg') no-repeat;
+	background-size: 120%;
+}
+
+}
+
+@media screen and (min-resolution: 2dppx) {
+
+section.splash {
+	background: none!important;
+}
+
 }
