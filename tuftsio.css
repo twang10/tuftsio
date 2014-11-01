@@ -72,6 +72,7 @@ section {
   margin: 0;
   max-width: none;
   height: 100vh;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.30);  
 }
 
 .content {
@@ -91,7 +92,6 @@ section {
 	color: #417dc1;
 	background-color: white;
 }
-
 
 
 /* Splash */
@@ -115,7 +115,9 @@ section#splash h1 {
 	color: white;
 	text-shadow: 0px 0px 10px rgba(0,0,0,0.30);
 	margin-bottom: 0px;
-	font-weight: 300;
+	margin-top: 0px;
+	font-weight: 700;
+	letter-spacing: .1em;
 	/*background-color: rgba(0,0,0,0.25);*/
 }
 
@@ -123,10 +125,18 @@ section#splash h3 {
 	font-size: 1.5em;
 	text-shadow: 0px 0px 10px rgba(0,0,0,0.30);
 	margin: 0;
-	color: white;
+	color: whitesmoke;
 	font-weight: 500;
 	text-transform: uppercase;
 	letter-spacing: .25em;
+}
+
+.splash-box {
+	box-shadow: 0px 0px 10px rgba(0,0,0,0.30);
+	padding: 35px;
+	background-image: url('/diagmonds.png');
+	background-attachment: fixed;
+	background-color: rgba(255,255,255,0.55);
 }
 
 /* About */
@@ -190,6 +200,12 @@ section#about .content .copy {
 		width: 80%;
 	}
 
+	.splash-box {
+		border: none;
+		padding: 0px;
+		background: none;
+		box-shadow: none;
+	}
 
 }
 /* Mobile Only */
