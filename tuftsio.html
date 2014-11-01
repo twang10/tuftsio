@@ -1,34 +1,40 @@
 <head>
-  <title>Tufts.io</title>
-  <link href='http://fonts.googleapis.com/css?family=Raleway:500,700,900,300' rel='stylesheet' type='text/css'>
+	<title>Tufts.io</title>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:500,700,900,300' rel='stylesheet' type='text/css'>
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 </head>
 
 <body>
 	{{> navbar }}
-	{{> splash }}
-	{{> about }}
 </body>
 
-<!-- Navbar -->
+<!-- CORE TEMPLATES -->
 <template name="navbar">
 	<nav class="nav white">
  		<ul class="nav-group">
-	 		<li><a href='#'>ABOUT</a></li>
-	 		<li><a href='#'>EVENTS</a></li>
- 			<li><a class="logo"><i class="fa fa-2x fa-rocket"></i></a></li>
- 			<li><a href='#'>NETWORK</a></li>
-	 		<li><a href='#'>SIGN IN</a></li>
+	 		<li><a href='/#about'>ABOUT</a></li>
+	 		<li><a href='/#events'>EVENTS</a></li>
+ 			<li><a href='/#splash' class="logo"><i class="fa fa-2x fa-rocket"></i></a></li>
+ 			<li><a href='/network'>NETWORK</a></li>
+	 		<li><a href='/#faq'>FAQ</a></li>
 	 	</ul>
  	</nav>
 </template>
 
+<template name="home">
+	{{> splash }}
+	{{> about  }}
+</template>
 
-<!-- PAGE TEMPLATES -->
+
+
+<!-- SECTION TEMPLATES -->
 <template name="splash">
-	<section class="splash">
+	<section id="splash">
 	 	<div class="content">
 	 		<div class="splash-text">
 		  		<h1>Welcome to Tufts.io</h1>
+		  		<h3>startups & technology</h3>
 		  		<br><br>
 		  		<!-- <h3>Let's build something awesome.</h3> -->
 		  		<a id="button" href="#">Learn More <i class="fa fa-angle-double-right"></i></a>
@@ -39,7 +45,7 @@
 
 <template name="about">
 	<div class="wrap">
-		<section class="about">
+		<section id="about">
 			<div class="content">
 				<br><br>
 				<i class="fa fa-5x fa-rocket"></i>
