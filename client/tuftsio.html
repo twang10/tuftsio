@@ -1,11 +1,12 @@
 <head>
   <title>Tufts.io</title>
-  <link href='http://fonts.googleapis.com/css?family=Oxygen:400,700,300' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Raleway:500,700,900,300' rel='stylesheet' type='text/css'>
 </head>
 
 <body>
-	{{> navbar}}
-	{{> home}}
+	{{> navbar }}
+	{{> splash }}
+	{{> about }}
 </body>
 
 <!-- Navbar -->
@@ -23,15 +24,36 @@
 
 
 <!-- PAGE TEMPLATES -->
-<template name="home">
+<template name="splash">
 	<section class="splash">
 	 	<div class="content">
 	 		<div class="splash-text">
 		  		<h1>Welcome to Tufts.io</h1>
 		  		<br><br>
 		  		<!-- <h3>Let's build something awesome.</h3> -->
-		  		<a id="learn-more" href="#">Learn More <i class="fa fa-angle-double-right"></i></a>
+		  		<a id="button" href="#">Learn More <i class="fa fa-angle-double-right"></i></a>
 	  		</div>
 		</div>
 	</section>
+</template>
+
+<template name="about">
+	<div class="wrap">
+		<section class="about">
+			<div class="content">
+				<br><br>
+				<i class="fa fa-5x fa-rocket"></i>
+				<div class="header">
+					<h3>tufts.io</h3>
+					<h1>an experiment</h1>
+				</div>
+				<hr>
+				<div class="copy">
+					Bacon ipsum dolor amet short ribs chuck flank boudin. Short ribs doner corned beef tail shank. Doner sausage beef pancetta ribeye cow ball tip drumstick. 
+					<br><br>
+					Tail corned beef ribeye pig salami t-bone. Meatloaf short ribs shank spare ribs andouille strip steak sirloin short loin shankle tail turducken chicken kielbasa pork loin. Brisket drumstick frankfurter kevin, ball tip chicken sausage biltong shoulder meatloaf spare ribs pork loin flank. 
+				</div>
+			</div>
+		</section>
+	</div>
 </template>
