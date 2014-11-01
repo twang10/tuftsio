@@ -1,5 +1,4 @@
 # Tufts.io
-A site I'm building for a group I'm starting at Tufts. 
-You can track it's progress [right here.](tuftsio.meteor.com)
+A site I'm building for a group I'm starting at Tufts. Uses meteor.js
 
-Built with [meteor.js](meteorjs.com)
+You can track it's progress at tuftsio.meteor.com.
