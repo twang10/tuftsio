@@ -4,7 +4,7 @@
 </head>
 
 <body>
-	{{> navbar }}
+	{{> navbar}}
 </body>
 
 <!-- CORE TEMPLATES -->
@@ -13,7 +13,7 @@
  		<ul class="nav-group">
 	 		<li><a href='/#about'>ABOUT</a></li>
 	 		<li><a href='/#events'>EVENTS</a></li>
- 			<li><a href='/#splash' class="logo"><i class="fa fa-2x fa-rocket"></i></a></li>
+ 			<li><a href='/#top' class="logo"><i class="fa fa-2x fa-rocket"></i></a></li>
  			<li><a href='/network'>NETWORK</a></li>
 	 		<li><a href='/#faq'>FAQ</a></li>
 	 	</ul>
@@ -21,10 +21,17 @@
 </template>
 
 <template name="home">
-	{{> splash }}
-	{{> about  }}
+	{{> splash}}
+	{{> about}}
 </template>
 
+<template name="network">
+	{{#if currentUser}}
+		{{> directory}}
+	{{else}}
+		{{> login }}
+	{{/if}}
+</template>
 
 
 <!-- SECTION TEMPLATES -->
@@ -37,7 +44,7 @@
 		  		<h3>[ startups & technology ]</h3>
 		  		<br><br>
 		  		<!-- <h3>Let's build something awesome.</h3> -->
-		  		<a id="button" href="#">Learn More <i class="fa fa-angle-double-right"></i></a>
+		  		<a class="button" href="#">Learn More <i class="fa fa-angle-double-right"></i></a>
 	  		</div>
 		</div>
 	</section>
@@ -60,6 +67,30 @@
 					Tail corned beef ribeye pig salami t-bone. Meatloaf short ribs shank spare ribs andouille strip steak sirloin short loin shankle tail turducken chicken kielbasa pork loin. Brisket drumstick frankfurter kevin, ball tip chicken sausage biltong shoulder meatloaf spare ribs pork loin flank. 
 				</div>
 			</div>
+		</section>
+	</div>
+</template>
+
+<!-- NETWORK APP -->
+<template name="login">
+	<div class="wrap">
+		<section id="login">
+				<div class="content">
+					<h1>Who are you looking for?</h1>
+					<div class="button">{{> loginButtons }}</div>
+			   </div>
+		</section>
+	</div>
+</template>
+
+<template name="directory">
+	<div class="wrap">
+		<section id="directory">
+				<div class="content">
+					{{# each people}}
+						<div>{{this.profile.name}}</div>
+					{{/ each}}	
+			   </div>
 		</section>
 	</div>
 </template>

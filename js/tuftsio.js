@@ -4,7 +4,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 if (Meteor.isClient) {
   Meteor.startup(function () {
-    // shout out to my boys over at css-tricks.com
+    // shout out to my boys over at css-tricks.com for smooth scrolling
     $(function() {
       $('a[href*=#]:not([href=#])').click(function() {
         if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -21,21 +21,11 @@ if (Meteor.isClient) {
     });
   });
 
-  // counter starts at 0
-  Session.setDefault("counter", 0);
-
-  Template.home.helpers({
-    counter: function () {
-      return Session.get("counter");
+  Template.directory.helpers({
+    people: function() {
+      return Meteor.users.find().fetch();
     }
-  });
-
-  Template.home.events({
-    'click button': function () {
-      // increment the counter when button is clicked
-      Session.set("counter", Session.get("counter") + 1);
-    }
-  });
+  })
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -43,7 +33,7 @@ if (Meteor.isClient) {
 ///////////////////////////////////////////////////////////////////////////////
 if (Meteor.isServer) {
   Meteor.startup(function () {
-    // code to run on server at startup
+    // code to run on server.. lol
   });
 }
 

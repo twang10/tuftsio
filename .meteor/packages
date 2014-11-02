@@ -8,4 +8,7 @@ autopublish
 insecure
 iron:router
 jquery
+accounts-base
+accounts-twitter
+accounts-ui-unstyled
 
