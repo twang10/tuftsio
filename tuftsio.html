@@ -73,25 +73,21 @@
 
 <!-- NETWORK APP -->
 <template name="login">
-	<div class="wrap">
 		<section id="login">
-				<div class="content">
-					<h1>Who are you looking for?</h1>
-					{{> atForm }}
-			   </div>
+			<div class="content">
+				<h1>Who are you looking for?</h1>
+				{{> atForm }}
+		   	</div>
 		</section>
-	</div>
 </template>
 
 <template name="app">
-	<div class="wrap">
-		<section id="app">
-				<div class="content">
-					<a id="sign-out">Sign Out</a>
-					{{# each people}}
-						<div>{{this.profile.name}}</div>
-					{{/ each}}	
-			   </div>
-		</section>
+	<div id="app" class="wrap">
+		<div class="content">
+			<a id="sign-out">Sign Out</a>
+			{{# each people}}
+				<div>{{this.profile.name}}</div>
+			{{/ each}}	
+	   </div>
 	</div>
 </template>

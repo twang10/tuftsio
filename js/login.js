@@ -1,23 +1,23 @@
 // Sign up template
 if (Meteor.isClient) {
   Meteor.startup(function () {
-    AccountsTemplates.removeField('email');
-    AccountsTemplates.removeField('password');
+    // AccountsTemplates.removeField('email');
+    // AccountsTemplates.removeField('password');
     AccountsTemplates.addFields([
-      {
-        _id: "username",
-        type: "text",
-        displayName: "username",
-        required: true,
-        minLength: 3,
-      },
-      {
-        _id: 'email',
-        type: 'email',
-        required: true,
-        displayName: "email",
-        re: /.+@(.+){2,}\.(.+){2,}/
-      },
+      // {
+      //   _id: "username",
+      //   type: "text",
+      //   displayName: "username",
+      //   required: true,
+      //   minLength: 3,
+      // },
+      // {
+      //   _id: 'email',
+      //   type: 'email',
+      //   required: true,
+      //   displayName: "email",
+      //   re: /.+@(.+){2,}\.(.+){2,}/
+      // },
       {
         _id: "invite",
         type: "text",
@@ -30,12 +30,12 @@ if (Meteor.isClient) {
         },
         errStr: 'Email Thomas.Wang@tufts.edu for a code!'
       },
-      {
-        _id: 'password',
-        type: 'password',
-        required: true,
-        minLength: 6,
-      }
+      // {
+      //   _id: 'password',
+      //   type: 'password',
+      //   required: true,
+      //   minLength: 6,
+      // }
     ]);
 
     // AccountsTemplates.addFields([
