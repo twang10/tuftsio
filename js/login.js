@@ -23,10 +23,13 @@ if (Meteor.isClient) {
         type: "text",
         required: true,
         displayName: 'Invite Code',
-        placeholder: ' ',
+        placeholder: 'Get one at Project Night',
         func: function(value) { 
-          Meteor.call('checkInviteCode', value);
-          return true;
+          if (value == 1) {
+            return true
+          } else {
+            return false
+          }
         },
         errStr: 'Email Thomas.Wang@tufts.edu for a code!'
       },
@@ -97,6 +100,19 @@ if (Meteor.isClient) {
     //     displayName: "Role (Optional)",
     //   }
     // ]);
+
+    //Render app home
+    AccountsTemplates.configureRoute('signIn', {
+      redirect: function(){
+        var user = Meteor.user();
+        if (user)
+          Router.go('/network');
+      }
+    });
+
     AccountsTemplates.init();
+
+
+
   });
 }

@@ -40,19 +40,7 @@ if (Meteor.isClient) {
 ///////////////////////////////////////////////////////////////////////////////
 if (Meteor.isServer) {
   Meteor.startup(function () {
-
-
-  });
-
-  Meteor.methods({
-    checkInviteCode: function (code) {
-        // TODO implement invite code functionality
-        if (code == 1) {
-          return true
-        } else {
-          return false
-        };
-    }
+    // Server sided validation 
   });
 }
 
@@ -66,4 +54,3 @@ Router.route('/', function () {
 Router.route('/network', function () {
   this.render('network');
 });
-
