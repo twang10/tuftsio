@@ -2,7 +2,7 @@
 section#login .content {
 	background-color: white;
 	vertical-align: middle;
-	font-size: 2em;
+	font-size: 1em;
 }
 
 section#login .button {
@@ -19,8 +19,9 @@ section#login .button:hover {
 	background-color: #417dc1!important;
 }
 
-section#directory .content {
+section#app .content {
 	vertical-align: middle;
 	background-color: white;
 }
+
 

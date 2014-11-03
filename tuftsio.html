@@ -27,7 +27,7 @@
 
 <template name="network">
 	{{#if currentUser}}
-		{{> directory}}
+		{{> app}}
 	{{else}}
 		{{> login }}
 	{{/if}}
@@ -77,16 +77,17 @@
 		<section id="login">
 				<div class="content">
 					<h1>Who are you looking for?</h1>
-					<div class="button">{{> loginButtons }}</div>
+					{{> atForm }}
 			   </div>
 		</section>
 	</div>
 </template>
 
-<template name="directory">
+<template name="app">
 	<div class="wrap">
-		<section id="directory">
+		<section id="app">
 				<div class="content">
+					<a id="sign-out">Sign Out</a>
 					{{# each people}}
 						<div>{{this.profile.name}}</div>
 					{{/ each}}	
